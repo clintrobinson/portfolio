@@ -1,0 +1,102 @@
+/**
+ * Typography
+ * -----------------------------------------------------------
+ * Typography settings for this project
+ */
+
+
+// typekit usage
+// regular: "ff-good-headline-web-pro-con" 400 normal/italic
+// bold: "ff-good-headline-web-pro-con" 900 normal/italic
+$primary_font_serif: "futura-pt", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+
+// typekit usage
+// regular: "proxima-nova-alt-condensed" 400 normal/italic
+// bold: "proxima-nova-alt-condensed" 700 normal/italic
+$secondary_font_sans: "proxima-nova", "proxima-nova-alt-condensed", "Helvetica-Neue", "Helvetica", "Arial", sans-serif;
+
+
+// DOUBLE STRANDED HEADING HIERARCHY
+// @ref: http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+
+// Extra large font sizes
+// $giga_font_size: rem-calc(85);
+// $mega_font_size: rem-calc(72);
+// $kilo_font_size: rem-calc(48);
+
+// Primary sizes (above won't be used on all projects)
+$alpha_font_size: rem-calc(45);
+$beta_font_size: rem-calc(30);
+$gamma_font_size: rem-calc(24);
+$delta_font_size: rem-calc(23);
+$epsilon_font_size: rem-calc(18);
+$zeta_font_size: 1rem;
+
+// Tiny font sizes
+// $milli_font_size: rem-calc(12);
+// $micro_font_size: rem-calc(10);
+
+
+
+// PLACEHOLDERS
+
+// create placeholder to fix firefox fonts here
+// -moz-osx-font-smoothing: grayscale;
+
+// Make it easy to use our font sizes throughout the site
+// %giga{font-size: $giga_font_size;}
+// .giga{ @extend %giga; }
+
+// %mega{font-size: $mega_font_size;}
+// .mega{ @extend %mega; }
+
+// %kilo{font-size: $kilo_font_size;}
+// .kilo{ @extend %kilo; }
+
+%alpha{font-size: $alpha_font_size;}
+.alpha, h1{ @extend %alpha; }
+
+%beta{font-size: $beta_font_size;}
+.beta, h2{ @extend %beta; }
+
+%gamma{font-size: $gamma_font_size;}
+.gamma, h3{ @extend %gamma; }
+
+%delta{font-size: $delta_font_size;}
+.delta, h4{ @extend %delta; }
+
+%epsilon{font-size: $epsilon_font_size;}
+.epsilon, h5{ @extend %epsilon; }
+
+%zeta{font-size: $zeta_font_size;}
+.zeta, h6{ @extend %zeta; }
+
+// %milli{font-size: $milli_font_size;}
+// .milli{ @extend %milli; }
+
+// %micro{font-size: $micro_font_size;}
+// .micro{ @extend %micro; }
+//
+
+
+// Font Families
+%futura{font-family: $primary_font_serif;}
+//%good_bold{font-weight: 900;}
+
+%proxima{font-family: $secondary_font_sans; }
+//%proxima_bold{font-weight: 700;}
+
+
+
+
+// FOUNDATION VARIABLES
+// We use these to control header font sizes in Foundation
+$h1-font-size: $alpha_font_size;
+$h2-font-size: $beta_font_size;
+$h3-font-size: $gamma_font_size;
+$h4-font-size: $delta_font_size;
+$h5-font-size: $epsilon_font_size;
+$h6-font-size: $zeta_font_size;
+
+// Font Defaults
+

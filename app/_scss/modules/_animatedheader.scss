@@ -1,0 +1,44 @@
+/* //////////////////
+
+Animated Header
+
+////////////////// */
+
+
+
+.animated-header {
+  text-align: center;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: auto;
+  background: rgba(255,255,255,.5);
+  z-index: 200;
+  height: auto;
+  overflow: hidden;
+  -webkit-transition: top 0.6s ease-out;
+  -moz-transition: top 0.6s ease-out;
+  transition: top 0.6s ease-out;
+  text-transform: uppercase;
+  @media #{$medium-up}{
+    top: -100px;
+  }
+
+  .animated-inner {
+    margin: 0 auto;
+    padding: 1rem;
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+
+/* Transitions and class for animation */
+
+
+.animated-header.animated-header-shrink {
+  height: auto;
+  top: 0;
+}

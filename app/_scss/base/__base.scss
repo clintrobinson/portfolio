@@ -1,0 +1,23 @@
+//
+// Foundation customization
+//
+@import "setup";  // to override sass variables, you need to declare them first
+                  // because SASS !default is the 'fallback' for unset vars
+                  // (see: http://robots.thoughtbot.com/sass-default)
+@import "settings";
+
+//
+// Project
+// Now we want to setup our defaults for this project and
+// import our useful code patterns from previous projects
+//
+@import "color";
+@import "type";
+@import "defaults";
+
+//
+// Libraries
+//
+@import "foundation/scss/normalize";
+@import "foundation/scss/foundation";
+@import "bourbon/dist/bourbon";

@@ -1,0 +1,38 @@
+/* //////////////////
+
+Work
+
+////////////////// */
+
+.work{
+  padding: 3em 0;
+  text-align: center;
+  .row{
+    overflow: hidden;
+  }
+  h1{
+    @extend %futura;
+    color: $blue;
+    display: inline-block;
+    font-weight: 800;
+    line-height: 0.75;
+    margin: 0 0 2rem 0;
+    position: relative;
+    text-transform: uppercase;
+    &:after{
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $blue;
+      bottom: 0;
+      width: 1500px;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $blue;
+      bottom: 0;
+      right: 100%;
+      width: 1500px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.row{
+  max-width: 75em;
+}
+
+.fullwidth{
+  .row{
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+%default-transition {
+  transition: all .25s ease-out;
+}
+%no-transition{
+  transition: none;
+}
