@@ -12,6 +12,11 @@
     <div class="columns large-10 medium-10 small-10">
       <p>My name is <span>Clint Robinson</span>. I build websites. I am currently working as a front-end developer at <span>Lift Interactive</span> in <span>Edmonton, Alberta</span>. I am passionate about modern front-end technology and work flow.
       </p>
+      <ul>
+        <li><a href="https://twitter.com/clintrobinson"><i class="fa fa-twitter"></i> Twitter</a></li>
+        <li><a href="http://jekyllrb.com/"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:me@clintrobinson.net"><i class="fa fa-envelope"></i> Email</a></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -43,7 +48,7 @@
 
       <div class="cd-timeline-content">
         <h2>Lift Interactive</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+        <h3>Front-end Developer</h3>
         <a href="#0" class="cd-read-more">Read more</a>
         <span class="cd-date">March 2014 - Present</span>
       </div> <!-- cd-timeline-content -->
@@ -56,7 +61,7 @@
 
       <div class="cd-timeline-content">
         <h2>Vendasta Technologies</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+        <h3>Web Designer/Graphic Designer</h3>
         <a href="#0" class="cd-read-more">Read more</a>
         <span class="cd-date">September 2013 - March 2014</span>
       </div> <!-- cd-timeline-content -->
@@ -69,7 +74,7 @@
 
       <div class="cd-timeline-content">
         <h2>University of Saskatchewan</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+        <h3>Web Designer</h3>
         <a href="#0" class="cd-read-more">Read more</a>
         <span class="cd-date">February 2012 - September 2013</span>
       </div> <!-- cd-timeline-content -->
@@ -85,41 +90,42 @@
   <div class="row">
     <div class="columns large-12">
       <h1>Blog</h1>
+    </div>
+    <div class="columns large-7">
       {{ content }}
     </div>
-  </div>
-</section>
-
-<section class="built-with">
-  <div class="row">
-    <div class="columns medium-8 medium-centered large-8 large-centered">
-      <h3>This site was built With</h3>
-      <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-1">
-        <li><img src="/img/yeoman.png"></li>
-        <li><img src="/img/grunt.png"></li>
-        <li><img src="/img/bower.png"></li>
-        <li><img src="/img/jekyll.png"></li>
+    <div class="columns large-4">
+      <h2 class="">Recent Posts</h2>
+      <ul class="posts">
+        {% for post in site.posts limit:20 %}
+           <li>
+             <span>{{ post.date | date_to_string }}</span> &raquo;
+             <a href="{{ BASE_PATH }}{{ post.url }}">
+             {{ post.title }}</a>
+           </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
 </section>
 
-
-
-<footer class="footer">
-  <div class="contact">
-    <p>
-      Clint Robinson<br />
-      <a href="mailto:me@clintrobinson.net">me@clintrobinson.net</a>
-    </p>
-  </div>
-  <div class="contact">
-    <p>
-      <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-      <a href="https://twitter.com/clintrobinson">twitter.com/yourusername</a><br />
-    </p>
+<footer class="built-with">
+  <div class="row">
+    <div class="columns medium-8 medium-centered large-8 large-centered">
+      <h3>This site was built With</h3>
+      <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-1">
+        <li><a href="http://yeoman.io/"><img src="/img/yeoman.png"></a></li>
+        <li><a href="http://gruntjs.com/"><img src="/img/grunt.png"></a></li>
+        <li><a href="http://bower.io/"><img src="/img/bower.png"></a></li>
+        <li><a href="http://jekyllrb.com/"><img src="/img/jekyll.png"></a></li>
+      </ul>
+    </div>
   </div>
 </footer>
+
+
+
+
 
 
 {% include footer.html %}

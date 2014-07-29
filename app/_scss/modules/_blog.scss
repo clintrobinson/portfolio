@@ -16,7 +16,7 @@ Banner
     display: inline-block;
     font-weight: 800;
     line-height: 0.75;
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 4rem;
     position: relative;
     text-transform: uppercase;
     &:after{
@@ -45,7 +45,19 @@ Banner
       color: #F8803E;
     }
   }
+
   .entry-content{
     text-align: left;
+    @extend %futura;
+    color: #555;
+    code{
+      font-family: monospace, monospace;
+    }
+    a{
+      color: #F8803E;
+    }
+    .highlight{
+      margin-bottom: 1rem;
+    }
   }
 }

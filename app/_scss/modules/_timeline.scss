@@ -38,7 +38,7 @@ $color-5: #f0ca45; // yellow
     display: inline-block;
     font-weight: 800;
     line-height: 0.75;
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 4rem;
     position: relative;
     text-transform: uppercase;
     &:after{
@@ -148,15 +148,15 @@ $color-5: #f0ca45; // yellow
   }
 
   &.lift-interactive {
-    background: #222;
+    //background: #222;
   }
 
   &.vendasta {
-    background: #43685a;
+    //background: #43685a;
   }
 
   &.usask {
-    background: #8fc73e;
+    //background: #8fc73e;
   }
   &.rawlco {
     background: $blue;
@@ -214,11 +214,19 @@ $color-5: #f0ca45; // yellow
   @include clearfix;
 
   h2 {
-    color: $blue;
     @extend %futura;
+    color: $blue;
+    line-height: 1.8rem;
+    margin-bottom: 0;
     text-transform: uppercase;
   }
-
+  h3{
+    @extend %futura;
+    color: #555;
+    font-size: rem-calc(18);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
   p, .cd-read-more, .cd-date {
     color: $blue;
     @extend %futura;

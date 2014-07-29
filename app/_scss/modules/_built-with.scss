@@ -5,7 +5,7 @@ Banner
 ////////////////// */
 
 .built-with{
-  background: #ccc;
+  background: $blue;
   padding: 3em 0;
   .row{
     text-align: center;
@@ -13,24 +13,24 @@ Banner
   }
   h3{
     @extend %futura;
-    color: #444;
+    color: white;
     display: inline-block;
     font-weight: 800;
     line-height: 0.75;
-    margin: 0 0 2rem 0;
+    margin: 2rem 0 4rem;
     position: relative;
     text-transform: uppercase;
     &:after{
       content: "";
       position: absolute;
-      border-bottom: 2px solid #444;
+      border-bottom: 2px solid white;
       bottom: 0;
       width: 1500px;
     }
     &:before{
       content: "";
       position: absolute;
-      border-bottom: 2px solid #444;
+      border-bottom: 2px solid white;
       bottom: 0;
       right: 100%;
       width: 1500px;

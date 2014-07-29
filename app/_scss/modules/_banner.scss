@@ -29,4 +29,27 @@ Banner
       line-height: 2.7rem;
     }
   }
+  ul{
+    margin: 0;
+    list-style-type: none;
+    @extend %futura;
+    text-transform: uppercase;
+    font-weight: 800;
+    li{
+      display: inline-block;
+      margin-right: 30px;
+
+      a{
+        @extend %default-transition;
+        font-size: rem-calc(18);
+        color: white;
+        i{
+          font-size: rem-calc(24);
+        }
+        &:hover{
+          color: $orange;
+        }
+      }
+    }
+  }
 }
