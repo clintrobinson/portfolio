@@ -1,0 +1,124 @@
+/* //////////////////
+
+Nav Toggle
+
+////////////////// */
+$transition-duration: 0.5s;
+$off-white: #eeeeee;
+
+@mixin transition($transition...) {
+ -webkit-transition: $transition;
+    -moz-transition: $transition;
+      -o-transition: $transition;
+         transition: $transition;
+}
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+       -o-transform: rotate($deg);
+          transform: rotate($deg);
+}
+@mixin animation($animation...) {
+ -webkit-animation: $animation;
+    -moz-animation: $animation;
+      -o-animation: $animation;
+         animation: $animation;
+}
+@mixin keyframes( $animationName ) {
+ @-webkit-keyframes $animationName { @content; }
+ @-moz-keyframes $animationName { @content; }
+ @-o-keyframes $animationName { @content; }
+ @keyframes $animationName { @content; }
+}
+
+@include keyframes(mainTrans) {
+  0% {
+    background: $off-white;
+  }
+  50%, 100% {
+    background: transparent;
+  }
+}
+@include keyframes(beforeTrans) {
+  0% {
+    top: 0.625rem;
+    @include rotate(0);
+  }
+  50% {
+    top: 0;
+    @include rotate(0);
+  }
+  100% {
+    top: 0;
+    @include rotate(45deg);
+  }
+}
+@include keyframes(afterTrans) {
+  0% {
+    top: -0.625rem;
+    @include rotate(0);
+  }
+  50% {
+    top: 0;
+    @include rotate(0);
+  }
+  100% {
+    top: 0;
+    @include rotate(-45deg);
+  }
+}
+
+.menu-bars {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 1rem;
+  padding: 1.8rem 1rem;
+  .main-bar {
+    position: relative;
+    width: 2.2rem;
+    height: 0.3125rem;
+    background: $off-white;
+    @include transition($transition-duration/2);
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      height: 0.3125rem;
+      width: 2.2rem;
+      background: $off-white;
+      z-index: -1;
+      @include transition($transition-duration/2);
+      @include rotate(0);
+    }
+    &:before {
+      top: 0.625rem;
+    }
+    &:after {
+      top: -0.625rem;
+    }
+  }
+
+}
+.sb-active{
+  .main-bar {
+
+    background: transparent;
+    @include animation(mainTrans 0.5s);
+    &:before {
+      top: 0;
+      @include rotate(45deg);
+      @include animation(beforeTrans 0.5s);
+      background: white;
+    }
+    &:after {
+      top: 0;
+      @include rotate(-45deg);
+      @include animation(afterTrans 0.5s);
+      background: white;
+    }
+  }
+}

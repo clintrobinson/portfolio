@@ -1,0 +1,33 @@
+/* //////////////////
+
+Nav Toggle
+
+////////////////// */
+.w-Posts{
+  @extend %futura;
+  text-align: left;
+  h4{
+    @extend %futura;
+    font-size: rem-calc(20);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 0;
+    a{
+      @extend %default-transition;
+      color: $orange;
+      &:hover{
+        color: darken($orange, 20%);
+      }
+    }
+  }
+  h5{
+    @extend %futura;
+    font-size: rem-calc(16);
+    line-height: 1rem;
+    margin-bottom: 0;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+  }
+}

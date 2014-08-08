@@ -10,6 +10,84 @@ Work
   .row{
     overflow: hidden;
   }
+  li{
+    position: relative;
+    padding: 0;
+    .overlay{
+      .text{
+        z-index: 2;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 2rem;
+        h2{
+          @extend %default-transition;
+          @extend %futura;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          color: white;
+          opacity: .3;
+          margin: 0;
+          font-weight: 900;
+          font-size: rem-calc(40);
+          border-bottom: 2px solid white;
+          text-transform: uppercase;
+          border: none;
+        }
+        p{
+          @extend %default-transition;
+          @extend %futura;
+          color: white;
+          position: relative;
+          top: 45%;
+          transform: translateY(-50%);
+          opacity: 0;
+          font-size: rem-calc(20);
+        }
+      }
+
+      @extend %default-transition;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .gradient{
+        z-index: 1;
+        @extend %default-transition;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: .3;
+        background: -moz-linear-gradient(45deg,  rgba(0,189,247,0.6) 0%, rgba(0,189,247,0.9) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(0,189,247,0.6)), color-stop(100%,rgba(0,189,247,0.9))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(45deg,  rgba(0,189,247,0.6) 0%,rgba(0,189,247,0.9) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(45deg,  rgba(0,189,247,0.6) 0%,rgba(0,189,247,0.9) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(45deg,  rgba(0,189,247,0.6) 0%,rgba(0,189,247,0.9) 100%); /* IE10+ */
+        background: linear-gradient(45deg,  rgba(0,189,247,0.6) 0%,rgba(0,189,247,0.9) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6600bdf7', endColorstr='#b300bdf7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+      }
+      &:hover{
+        .gradient{
+          opacity: 1;
+        }
+        .text{
+          h2{
+            color: white;
+            opacity: 1;
+            border-bottom: 2px solid white;
+            top: 50%;
+            transform: translateY(-80%);
+          }
+          p{
+            opacity: 1;
+            top: 42%;
+            transform: translateY(-80%);
+          }
+        }
+      }
+    }
+  }
   h1{
     @extend %futura;
     color: $blue;

@@ -1,0 +1,26 @@
+<section class="blog">
+  <div class="row">
+    <div class="columns large-12">
+      <h1>Blog</h1>
+    </div>
+    <div class="columns large-7">
+      <div class="blog-index">
+        {% assign post = site.posts.first %}
+        {% assign content = post.content %}
+        {% include post_detail.html %}
+      </div>
+    </div>
+    <div class="columns large-4 w-Posts">
+      <h2 class="">Recent Posts</h2>
+      <ul class="">
+        {% for post in site.posts limit:5 %}
+           <li>
+             <h5>{{ post.date | date_to_string }}</h5>
+             <h4><a href="{{ BASE_PATH }}{{ post.url }}">
+             {{ post.title }}</a></h4>
+           </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,32 +1,26 @@
+    <footer class="built-with">
+      <div class="row">
+        <div class="columns medium-8 medium-centered large-8 large-centered">
+          <h3>This site was built With</h3>
+          <ul class="large-block-grid-4 medium-block-grid-2 small-block-grid-1">
+            <li><a href="http://yeoman.io/"><img src="/img/yeoman.png"></a></li>
+            <li><a href="http://gruntjs.com/"><img src="/img/grunt.png"></a></li>
+            <li><a href="http://bower.io/"><img src="/img/bower.png"></a></li>
+            <li><a href="http://jekyllrb.com/"><img src="/img/jekyll.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
 <!-- build:js(app) /js/scripts.js -->
-    <script src="/js/vendor/modernizr.js" type="text/javascript"></script>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/foundation.min.js"></script>
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <script src="/_bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/_bower_components/foundation/js/foundation.min.js"></script>
     <script src="/js/classie.js"></script>
     <script src="/js/animatedheader.min.js"></script>
+    <script src="/_bower_components/Slidebars/distribution/0.10.2/slidebars.min.js"></script>
     <script src="/js/main.js"></script>
-    <script type="text/javascript">
-      $(document).foundation();
-      $(document).ready(function() {
-        var $timeline_block = $('.cd-timeline-block');
-
-        //hide timeline blocks which are outside the viewport
-        $timeline_block.each(function(){
-          if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-            $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-          }
-        });
-
-        //on scolling, show/animate timeline blocks when enter the viewport
-        $(window).on('scroll', function(){
-          $timeline_block.each(function(){
-            if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-              $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-            }
-          });
-        });
-      });
-    </script>
     <!-- endbuild -->
     </body>
 </html>
