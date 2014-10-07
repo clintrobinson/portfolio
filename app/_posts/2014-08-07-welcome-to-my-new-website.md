@@ -11,7 +11,7 @@ In my new role at <a href="http://liftinteractive.com/">Lift Interactive</a>, I'
 
 The site is built using the <a href="http://jekyllrb.com/">Jekyll</a> static site generator. Jekyll is very lean when it comes to options/features, but since the templating language(Liquid) is very similar to the Django templating language that we use at Lift, I thought it would be a good fit.
 
-One of the other really cool things that was integral in building this site was <a href="http://yeoman.io/">Yeoman</a>. Yeoman is a scaffolding tool for websites and web apps that combines <a href="http://gruntjs.com/">Grunt</a> for running tasks, such as auto compiling your Sass files, minifying js/css, as well as running a local server with <a href="http://bower.io">Bower</a> for managing you dependencies and libraries. 
+One of the other really cool things that was integral in building this site was <a href="http://yeoman.io/">Yeoman</a>. Yeoman is a scaffolding tool for websites and web apps that combines <a href="http://gruntjs.com/">Grunt</a> for running tasks, such as auto compiling your Sass files, running a local server and minifying js/css, with <a href="http://bower.io">Bower</a> for managing your dependencies and libraries. 
 
 For this project I used a <a href="https://github.com/robwierzbowski/generator-jekyllrb">generator</a> built by Rob Wierzbowski that I had found on the Yeoman website. There were a few dependencies that I had to add, such as Foundation, but overall it fit my needs, and the development process was smooth. 
 

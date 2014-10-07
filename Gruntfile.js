@@ -132,6 +132,18 @@ module.exports = function (grunt) {
         }]
       }
     },
+    webfont: {
+      icons: {
+        src: '<%= yeoman.app %>/icons/*.svg',
+        dest: '<%= yeoman.app %>/fonts',
+        options: {
+          syntax: 'bootstrap',
+          stylesheet: 'scss',
+          font: 'p-iconfont',
+          relativeFontPath: '../fonts'
+        }
+      }
+    },
     autoprefixer: {
       options: {
         browsers: ['last 2 versions']
@@ -241,6 +253,15 @@ module.exports = function (grunt) {
       }
     },
     copy: {
+      font_sass: {
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: '<%= yeoman.app %>/fonts/',
+          src: ['*.scss'],
+          dest: '<%= yeoman.app %>/_scss/patterns/'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -261,6 +282,7 @@ module.exports = function (grunt) {
           ],
           dest: '<%= yeoman.dist %>'
         }]
+
       },
       // Copy CSS into .tmp directory for Autoprefixer processing
       stageCss: {
@@ -282,8 +304,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/**/*.js',
             '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
-            '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
+            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         }]
       }
@@ -340,6 +361,8 @@ module.exports = function (grunt) {
     }
 
     grunt.task.run([
+      'webfont',
+      'copy',
       'clean:server',
       'concurrent:server',
       'autoprefixer:server',
@@ -369,16 +392,20 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'webfont',
+    'copy',
     'clean',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
+
     'concurrent:dist',
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
     'cssmin',
+
     'uglify',
-    'imagemin',
+    //'imagemin',
     'svgmin',
     'filerev',
     'usemin',

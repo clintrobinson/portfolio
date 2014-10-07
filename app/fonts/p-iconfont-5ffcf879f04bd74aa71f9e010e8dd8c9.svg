@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20120731 at Wed Aug 20 19:03:45 2014
+ By Clint Robinson
+Created by Clint Robinson with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="p-iconfont" horiz-adv-x="187" >
+  <font-face 
+    font-family="p-iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 3 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="0 0 490 441"
+    underline-thickness="25"
+    underline-position="-52"
+    unicode-range="U+F101-F103"
+  />
+<missing-glyph 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".notdef" 
+d="M17 0v341h136v-341h-136zM34 17h102v307h-102v-307z" />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" horiz-adv-x="170" 
+ />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="490" 
+d="M490 356l-251 -133l-239 133q1 13 10 22t22 9h426q13 0 22 -9t10 -22zM239 164l251 134v-178q0 -14 -9 -23t-23 -9h-426q-14 0 -23 9t-9 23v178z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" horiz-adv-x="353" 
+d="M44 360q-20 0 -32 12t-12 29q0 16 12 28t32 12t32 -12q10 -9 12 -28q0 -17 -12 -29t-32 -12zM7 324h74v-229h-74v229zM199 95h-74v177l-1 52h71l3 -32q26 39 66 39q39 0 64 -28t25 -75v-133h-74v125q0 26 -11 39q-10 13 -29 13q-16 0 -28 -12t-12 -32v-133z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" horiz-adv-x="402" 
+d="M402 371q-17 -26 -41 -43v-10q0 -29 -10 -66q-9 -32 -29 -63q-23 -35 -47 -54q-25 -21 -66 -37q-36 -14 -83 -14q-74 0 -126 33q6 -1 19 -1q54 0 102 39q-27 2 -47 17q-22 16 -29 40q5 -1 15 -1q1 0 22 3q-28 6 -47 28q-18 21 -18 52v1q20 -10 37 -10q-37 25 -37 68
+q0 19 11 39q30 -36 75 -59q46 -24 95 -25q-2 10 -2 19q0 34 24 58q25 25 58 25q34 0 61 -27q29 6 51 20q-9 -30 -35 -45q25 5 47 13z" />
+  </font>
+</defs></svg>

@@ -212,11 +212,13 @@ $color-5: #f0ca45; // yellow
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  text-align: right;
+  text-align: left;
   @include border-radius;
   padding: 0.35rem;
   @include clearfix;
-
+  @media #{$medium-up}{
+    text-align: right;
+  }
   h2 {
     @extend %futura;
     color: $blue;
@@ -248,12 +250,14 @@ $color-5: #f0ca45; // yellow
   }
 
   .cd-read-more {
-    float: right;
+    float: none;
     padding: .8em 1em;
     background: $link;
     color: $color-3;
     @include border-radius;
-
+    @media #{$medium-up}{
+      float: right;
+    }
     .no-touch &:hover {
       background-color: lighten($link, 5%);
     }
@@ -263,6 +267,7 @@ $color-5: #f0ca45; // yellow
     float: left;
     padding: .8em 0;
     opacity: .7;
+    clear: left;
   }
 
 

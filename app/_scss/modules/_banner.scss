@@ -38,7 +38,6 @@ Banner
     li{
       display: inline-block;
       margin-right: 30px;
-
       a{
         @extend %default-transition;
         font-size: rem-calc(18);
@@ -47,9 +46,12 @@ Banner
           font-size: rem-calc(24);
         }
         &:hover{
-          color: $orange;
+          color: rgba(0,0,0,0.4);
+
         }
+
       }
+
     }
   }
 }
