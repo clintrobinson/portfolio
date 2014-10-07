@@ -22,7 +22,7 @@ Banner
     &:after{
       content: "";
       position: absolute;
-      border-bottom: 2px solid green;
+      border-bottom: 2px solid $blue;
       bottom: 0;
       width: 1500px;
     }
