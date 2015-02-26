@@ -38,6 +38,7 @@ Banner
   h2{
     @extend %futura;
     color: $blue;
+    line-height: 1;
     text-align: left;
     text-transform: uppercase;
     font-weight: 800;
@@ -45,7 +46,13 @@ Banner
       color: #F8803E;
     }
   }
-
+  code {
+    font-size: .875rem;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-weight: 700;
+    color: #bd260d;
+    text-transform: none;
+  }
   .entry-content{
     text-align: left;
     @extend %futura;
