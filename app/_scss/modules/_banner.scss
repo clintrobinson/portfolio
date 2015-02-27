@@ -6,14 +6,31 @@ Banner
 
 .banner{
   padding: 6rem 0;
-  background: #0082aa; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #0082aa 0%, #00bdf7 100%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0082aa), color-stop(100%,#00bdf7)); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center, #0082aa 0%,#00bdf7 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082aa', endColorstr='#00bdf7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  position: relative;
+  background: url("../img/bkgd_hero_color.jpg") center center no-repeat;
+  background-size: cover;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: .7;
+    background: #0082aa; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #0082aa 0%, #00bdf7 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#0082aa), color-stop(100%,#00bdf7)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, #0082aa 0%,#00bdf7 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, #0082aa 0%,#00bdf7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0082aa', endColorstr='#00bdf7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    z-index: 3;
+  }
+  > .row{
+    position: relative;
+    z-index: 5;
+  }
   p {
     @extend %futura;
     color: white;
@@ -38,10 +55,16 @@ Banner
     li{
       display: inline-block;
       margin-right: 30px;
+      @media #{$small-only}{
+          display: block;
+        }
       a{
         @extend %default-transition;
         font-size: rem-calc(18);
         color: white;
+        @media #{$small-only}{
+          line-height: 1;
+        }
         i{
           font-size: rem-calc(24);
         }
@@ -53,5 +76,40 @@ Banner
       }
 
     }
+  }
+  .attribution{
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    font-size: .75rem;
+    color: white;
+  }
+}
+
+
+.banner-sub{
+  padding: .5rem 0;
+  position: relative;
+  background-size: cover;
+  text-align: center;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    background: #00bdf7; /* Old browsers */
+    z-index: 3;
+  }
+  > .row{
+    position: relative;
+    z-index: 5;
+  }
+  img{
+    width: 40px;
+    /* padding: 0; */
+    height: 40px;
   }
 }

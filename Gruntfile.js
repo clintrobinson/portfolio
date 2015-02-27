@@ -407,7 +407,6 @@ module.exports = function (grunt) {
     'uglify',
     //'imagemin',
     'svgmin',
-    'filerev',
     'usemin',
     'htmlmin'
     ]);
