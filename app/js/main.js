@@ -1423,12 +1423,20 @@ $(document).ready(function() {
         $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
       }
     });
+    var scrollPos = $(window).scrollTop();
+    var contentPos = $('.contentStart').position().top;
+    if (scrollPos >= contentPos) {
+      $('.topbar').addClass('scrolled');
+    } else {
+      $('.topbar').removeClass('scrolled');
+    }
   });
   // $.slidebars({
   //   siteClose: true, // true or false
   //   scrollLock: true // true or false
   // });
 });
+
 
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

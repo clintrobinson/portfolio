@@ -13,7 +13,6 @@
 //
 @import "color";
 @import "type";
-@import "defaults";
 
 //
 // Libraries
@@ -21,3 +20,5 @@
 @import "foundation/scss/normalize";
 @import "foundation/scss/foundation";
 @import "bourbon/dist/bourbon";
+
+@import "defaults";
